@@ -1,0 +1,15 @@
+<template name='edit'>
+  <div class="ui basic segment">
+    {{#autoForm id="edit" type="update" collection="Products" doc=this}}
+      {{#each afFieldNames}}
+        {{> afQuickField name=this.name options=afOptionsFromSchema}}
+      {{/each}}
+      <br>
+      <div class="ui buttons">
+        <button class="ui positive button" type="submit">Save</button>
+        <div class="or"></div>
+        <button class="ui negative button" >Cancel</button>
+      </div>
+    {{/autoForm}}
+  </div>
+</template>

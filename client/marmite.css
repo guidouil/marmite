@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.pusher {
+  height: 100%;
+  width: 100%;
+  padding-top: 54px;
+  overflow: hidden;
+}

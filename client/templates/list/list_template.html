@@ -1,0 +1,34 @@
+<template name='list'>
+  <div class="ui basic fluid list-segment">
+    {{#if products}}
+      <div class="ui relaxed divided list middle">
+
+      {{#each products}}
+        <div class="item">
+          <div class="right floated">
+            <button class="ui circular basic green icon button" data-action="edit" data-id="{{_id}}">
+              <i class="pencil icon"></i>
+            </button>
+            <button class="ui circular basic red icon button" data-action="delete" data-id="{{_id}}">
+              <i class="trash icon"></i>
+            </button>
+          </div>
+          <img class="ui middle aligned mini image" src="{{getImg imageUrl}}">
+          <div class="content">
+            <a class="header">{{name}}</a>
+            <div class="description">{{truncateString description 30}} </div>
+            <div class="description">#{{plus @index 1}} <small>Created {{fromNow createdAt}}</small> <strong>{{formatMoney price}}</strong> </div>
+          </div>
+        </div>
+      {{/each}}
+
+      </div>
+    {{else}}
+      <div class="ui basic segment">
+        <div class="ui raised center aligned segment">
+          <h4>Please scan some barcodes</h4>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</template>

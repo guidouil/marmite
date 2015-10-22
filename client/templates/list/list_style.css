@@ -1,0 +1,11 @@
+.list-segment {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.list {
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
