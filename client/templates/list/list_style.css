@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.list {
+.ui.list {
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
