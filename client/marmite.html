@@ -13,7 +13,11 @@
   {{> sidebar}}
   <div class="pusher">
     {{> header}}
-    {{> yield}}
+    <div class="container">
+      <div class="scroll">
+        {{> yield}}
+      </div>
+    </div>
     {{> footer}}
   </div>
 </template>
