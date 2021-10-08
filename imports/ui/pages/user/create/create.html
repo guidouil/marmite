@@ -1,0 +1,33 @@
+<template name="create">
+  {{> logo classNames='centered tiny'}}
+  <br />
+  <div class="ui three column centered doubling stackable grid">
+    <div class="column">
+      <div class="ui {{isDark}} raised segment">
+        <h1 class="ui center aligned header">Create account</h1>
+        <form class="ui {{isDark}} large form" id="createForm">
+          <div class="field required">
+            <label for="firstname">Firstname</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Firstname" autocomplete="given-name" />
+          </div>
+          <div class="field required">
+            <label for="lastname">Lastname</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Lastname" autocomplete="family-name" />
+          </div>
+          <div class="required field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email address" autocomplete="email" />
+          </div>
+          <div class="required field">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="New unique password" id="password" />
+          </div>
+          <button type="submit" class="ui {{isDark}} big primary fluid submit button">Create account</button>
+          <div class="ui {{isDark}} error message"></div>
+        </form>
+        <div class="ui {{isDark}} section horizontal divider">or</div>
+        <a class="ui {{isDark}} large fluid button" href="/user/login">Login</a>
+      </div>
+    </div>
+  </div>
+</template>

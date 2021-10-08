@@ -1,0 +1,27 @@
+<template name="login">
+  {{> logo classNames='centered tiny'}}
+  <br />
+  <div class="ui three column centered doubling stackable grid">
+    <div class="column">
+      <div class="ui {{isDark}} raised segment">
+        <h1 class="ui center aligned header">Login</h1>
+        <form class="ui {{isDark}} large form" id="loginForm">
+          <div class="required field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email address" />
+          </div>
+          <div class="required field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Secret password" />
+          </div>
+          <p class="centerThis"><a href="/user/forgot">Forgot password?</a></p>
+          <button type="submit" class="ui {{isDark}} big primary fluid submit button">Login</button>
+          <div class="ui {{isDark}} error message"></div>
+        </form>
+        <div class="ui {{isDark}} section horizontal divider">or</div>
+        <a class="ui {{isDark}} big fluid button" href="/user/create">Create account</a>
+        <br />
+      </div>
+    </div>
+  </div>
+</template>

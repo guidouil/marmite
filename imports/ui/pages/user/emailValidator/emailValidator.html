@@ -1,0 +1,32 @@
+<template name="emailValidator">
+  <div class="ui container">
+    {{> logo classNames='centered tiny'}}
+    <div class="ui {{isDark}} center aligned raised segment">
+      <h1 class="ui header">Please validate your email address</h1>
+      <p>Your email address isn't validated yet.</p>
+      <p>
+        Please check your inbox (and the spam folder) for an email from this site to validate your
+        account.
+      </p>
+      <h2 class="ui header">It was sent to <a>{{currentUser.emails.[0].address}}</a></h2>
+      <p>If you don't find the mail we sent, you can click bellow button to recieve a new one.</p>
+      {{#unless sent}}
+      <div class="ui primary large icon labeled button" id="sendVerifyButton">
+        <i class="paper plane icon"></i>
+        Send verification mail
+      </div>
+      {{else}}
+      <h2 class="ui header">Verification mail sent</h2>
+      {{/unless}}
+      <div class="ui divider"></div>
+      <p>
+        If you did not provide a correct email address, please delete current account and create a new account with the
+        correct address.
+      </p>
+      <div class="ui red large icon labeled button" id="deleteAccountButton">
+        <i class="trash icon"></i>
+        Delete current account
+      </div>
+    </div>
+  </div>
+</template>

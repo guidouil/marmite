@@ -1,0 +1,37 @@
+<template name="header">
+  <div class="ui {{isDark}} top fixed borderless big icon menu">
+    <div class="ui {{className}} container">
+      {{#unless isHome}}
+      <div class="fitted item middle aligned" id="goBack">
+        <i class="angle left icon" id="goBackIcon"></i>
+      </div>
+      {{else}}
+      <div class="fitted item middle aligned"><i class="fake icon"></i></div>
+      {{/unless}}
+      <a href="/" class="item {{isActive 'home'}}"><i class="home icon"></i></a>
+      <a href="/help" class="item {{isActive 'help'}} "><i class="help icon"></i></a>
+
+      <div class="right menu">
+        {{#unless currentUser}}
+        <a href="/user/login" class="item"><i class="user icon"></i></a>
+        {{else}}
+        <a class="ui {{isDark}} dropdown item" id="headerMenu">
+          <i class="hamburger icon" id="headerMenuIcon"></i>
+          <div class="ui menu">
+            <a class="item" href="/user/profile"><i class="address card icon"></i>Profile</a>
+            {{#unless currentUser.emails.[0].verified}}
+            <div class="item" id="sendVerifyButton">
+              <i class="mail icon"></i>
+              Verify email
+            </div>
+            {{/unless}}
+            <div class="ui divider"></div>
+            <a class="red item" id="logoutButton"> <i class="red power icon"></i>Logout</a>
+          </div>
+        </a>
+        {{initDropdown}}
+        {{/unless}}
+      </div>
+    </div>
+  </div>
+</template>

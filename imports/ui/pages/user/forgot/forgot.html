@@ -1,0 +1,30 @@
+<template name="forgot">
+  {{> logo classNames='centered tiny'}}
+  <br />
+  <div class="ui three column centered doubling stackable grid">
+    <div class="column">
+      <div class="ui {{isDark}} raised segment">
+        <h1 class="ui center aligned header">Forgot password</h1>
+        {{#unless sent}}
+        <form class="ui {{isDark}} large form" id="forgotForm">
+          <div class="required field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <button type="submit" class="ui {{isDark}} large primary fluid submit button">
+            Send reset password email
+          </button>
+          <div class="ui error message"></div>
+        </form>
+        {{else}}
+        <div class="ui {{isDark}} positive message">
+          <div class="header">Reset password mail sent</div>
+          <p>Please check your inbox and spam folder.</p>
+        </div>
+        {{/unless}}
+        <div class="ui section divider"></div>
+        <a class="ui {{isDark}} fluid secondary button" href="/user/login">Login</a>
+      </div>
+    </div>
+  </div>
+</template>

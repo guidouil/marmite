@@ -1,0 +1,17 @@
+<template name="info">
+  <div class="ui {{isDark}} compact segment">
+    <h2 class="ui header">Learn Meteor!</h2>
+    <ul class="ui large list">
+      <li class="item">
+        <form class="info-link-add">
+          <input type="text" name="title" placeholder="Title" required>
+          <input type="url" name="url" placeholder="Url" required>
+          <input type="submit" name="submit" value="Add new link">
+        </form>
+      </li>
+      {{#each links}}
+      <li class="item"><a href="{{url}}" target="_blank">{{title}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

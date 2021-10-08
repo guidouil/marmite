@@ -1,0 +1,39 @@
+{
+  "name": "marmite",
+  "private": true,
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
+  },
+  "engines": {
+    "node": "14.17.6"
+  },
+  "scripts": {
+    "start": "meteor run",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent",
+    "test": "meteor test --once --driver-package meteortesting:mocha"
+  },
+  "eslintConfig": {
+    "extends": "@meteorjs/eslint-config-meteor"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "jquery": "^3.6.0",
+    "meteor-node-stubs": "^1.1.0"
+  },
+  "devDependencies": {
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-meteor": "^7.3.0",
+    "eslint-plugin-react": "^7.26.1"
+  }
+}

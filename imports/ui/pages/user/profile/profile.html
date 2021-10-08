@@ -1,0 +1,29 @@
+<template name="profile">
+  <h1 class="ui {{isDark}} header">My profile</h1>
+  <div class="ui {{isDark}} raised segment">
+    <form class="ui {{isDark}} large form" id="profileForm" autocomplete="on">
+      <div class="field required">
+        <label for="firstname">First name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="First name"
+          value="{{currentUser.profile.firstname}}" autocomplete="given-name" />
+      </div>
+      <div class="field required">
+        <label for="lastname">Last name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Last name"
+          value="{{currentUser.profile.lastname}}" autocomplete="family-name" />
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input type="text" name="company" id="company" placeholder="Company" value="{{currentUser.profile.company}}"
+          autocomplete="organization" />
+      </div>
+      <div class="field">
+        <label for="position">Position</label>
+        <input type="text" name="position" id="position" placeholder="Position" value="{{currentUser.profile.position}}"
+          autocomplete="organization-title" />
+      </div>
+      <button class="ui {{isDark}} primary large fluid button" type="submit">Save</button>
+      <div class="ui error message"></div>
+    </form>
+  </div>
+</template>

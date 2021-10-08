@@ -1,0 +1,23 @@
+<template name="footer">
+  <div class="ui {{ isDark }} borderless fluid tiny icon menu notPrinted">
+    <div class="ui {{className}} container">
+      <div class="left menu">
+        <a href="/terms" class="item">Terms</a>
+      </div>
+      <div class="item">
+        <span>
+          &copy;{{ year }}
+          <a href="/">Marmite</a> {{#unless isMobile}} crafted with
+          <i class="fitted red heart icon" id="love"></i>
+          {{/unless}} by
+          <a href="https://wipfrance.com" target="_blank">WIP&nbsp;France</a>
+        </span>
+      </div>
+      <div class="right menu">
+        <a class="item" id="darkMode">
+          <i class="{{ darkModeIcon }} icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</template>

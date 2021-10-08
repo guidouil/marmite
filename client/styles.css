@@ -1,0 +1,82 @@
+.Site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.mainContainer {
+	flex: 1;
+	padding-top: 4rem;
+	padding-bottom: 1rem;
+}
+
+.mainContainerNoHeader {
+	flex: 1;
+	padding-bottom: 3rem;
+}
+
+/* Dark Mode Start */
+.inverted .selection.dropdown,
+.inverted .focus.dropdown,
+.inverted textarea,
+.inverted input,
+.ui.input.inverted,
+.ui.icon.input.inverted {
+	background: #444444 !important;
+	color: #fafafa !important;
+	border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.Site.inverted {
+	background-color: #0d1117 !important;
+}
+
+.ui.inverted.accordion,
+.ui.inverted.accordion .title {
+	background: #1b1c1d !important;
+	color: rgba(255, 255, 255, .9) !important;
+	border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.ui.inverted.accordion .active.content {
+	background-color: #222222;
+}
+
+.ui.inverted.form .ui.checkbox label,
+.inverted .ui.toggle.checkbox input:checked~label {
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dropdown.icon {
+	border: none !important;
+	background-color: transparent !important;
+}
+
+.ui.inverted.checkbox input:checked~.box,
+.ui.inverted.checkbox input:checked~label {
+	color: rgba(122, 111, 111, 0.95) !important;
+	outline-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.inverted p {
+	color: #fafafa !important;
+}
+
+.ui.rating.inverted .icon {
+	color: lightgray !important;
+}
+
+.ui.yellow.rating .active.icon {
+	color: #FFE21F !important;
+	text-shadow: 0px -1px 0px #FBBD08, -1px 0px 0px #FBBD08, 0px 1px 0px #FBBD08, 1px 0px 0px #FBBD08;
+}
+
+.ui.yellow.rating .icon.selected,
+.ui.yellow.rating .icon.selected.active,
+.ui.yellow.rating .icon.selected.partial.active {
+	color: #ebcd00 !important;
+	text-shadow: 0px -1px 0px #eaae00, -1px 0px 0px #eaae00, 0px 1px 0px #eaae00, 1px 0px 0px #eaae00;
+	-webkit-text-stroke: unset;
+	background-clip: unset;
+}
+
+/* Dark Mode End */
