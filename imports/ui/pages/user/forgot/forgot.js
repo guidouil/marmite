@@ -7,7 +7,6 @@ import './forgot.html';
 import '../../../components/logo/logo.js';
 
 Template.forgot.onCreated(() => {
-  document.title = 'Focus - user forgot';
   const instance = Template.instance();
   instance.sent = new ReactiveVar(false);
 });

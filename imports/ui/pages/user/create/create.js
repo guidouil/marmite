@@ -6,10 +6,6 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import './create.html';
 import '../../../components/logo/logo.js';
 
-Template.create.onCreated(() => {
-  document.title = 'Focus - user create';
-});
-
 Template.create.onRendered(() => {
   $('#createForm').form({
     fields: {

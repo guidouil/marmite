@@ -6,10 +6,6 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import './login.html';
 import '../../../components/logo/logo.js';
 
-Template.login.onCreated(() => {
-  document.title = 'Focus - user login';
-});
-
 Template.login.onRendered(() => {
   $('#loginForm').form({
     fields: {

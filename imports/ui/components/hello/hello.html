@@ -1,7 +1,13 @@
 <template name="hello">
   <div class="ui {{isDark}} compact segment">
-    <button class="ui {{isDark}} button">Click Me</button>
-    <div class="ui divider"></div>
-    <p>You've pressed the button {{counter}} times.</p>
+    <div class="ui {{isDark}} horizontal statistic">
+      <div class="value">
+        {{counter}}
+      </div>
+      <div class="label">
+        Times you clicked the button
+      </div>
+    </div>
+    <button class="ui {{isDark}} big primary fluid button">Click Me</button>
   </div>
 </template>
